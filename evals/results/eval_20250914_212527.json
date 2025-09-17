@@ -1,0 +1,31 @@
+{
+  "timestamp": "20250914_212527",
+  "average_score": 0.0,
+  "results": [
+    {
+      "test_id": "mixed_001",
+      "score": 0,
+      "error": "'\\n  \"primary_tone\"'"
+    },
+    {
+      "test_id": "urgent_001",
+      "score": 0,
+      "error": "'\\n  \"primary_tone\"'"
+    },
+    {
+      "test_id": "professional_001",
+      "score": 0,
+      "error": "'\\n  \"primary_tone\"'"
+    },
+    {
+      "test_id": "friendly_001",
+      "score": 0,
+      "error": "'\\n  \"primary_tone\"'"
+    },
+    {
+      "test_id": "apologetic_001",
+      "score": 0,
+      "error": "'\\n  \"primary_tone\"'"
+    }
+  ]
+}

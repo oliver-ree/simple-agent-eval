@@ -1,0 +1,53 @@
+[
+    {
+        "id": "mixed_001",
+        "email": "Hi there,\n\nI'm really sorry but I need this urgently. Can you please help me ASAP?\n\nThanks!",
+        "expected": {
+          "primary_tone": "urgent",
+          "confidence_min": 6,
+          "should_contain": ["mixed", "urgent", "apologetic"]
+        }
+      },
+
+  {
+    "id": "urgent_001",
+    "email": "Hi John,\n\nI need the quarterly report ASAP. The board meeting is tomorrow and I don't have the numbers yet.\n\nThanks,\nSarah",
+    "expected": {
+      "primary_tone": "urgent",
+      "confidence_min": 7,
+      "should_contain": ["time pressure", "deadline", "ASAP"]
+    }
+  },
+  {
+    "id": "professional_001", 
+    "email": "Dear Mr. Smith,\n\nI am writing to follow up on our previous discussion regarding the proposed partnership. Please find attached the updated terms for your review.\n\nBest regards,\nJane Doe",
+    "expected": {
+      "primary_tone": "professional",
+      "confidence_min": 8,
+      "should_contain": ["formal", "business"]
+    }
+  },
+  {
+    "id": "friendly_001",
+    "email": "Hey Mike!\n\nHope you're doing well! Just wanted to check in and see how the project is going. Let me know if you need anything!\n\nCheers,\nAlex",
+    "expected": {
+      "primary_tone": "friendly", 
+      "confidence_min": 7,
+      "should_contain": ["casual", "warm"]
+    }
+  },
+  {
+    "id": "apologetic_001",
+    "email": "Hi Sarah,\n\nI'm really sorry for the delay on this. I know I promised it yesterday and I completely dropped the ball. I'll have it to you by end of day today.\n\nSorry again,\nTom",
+    "expected": {
+      "primary_tone": "apologetic",
+      "confidence_min": 8,
+      "should_contain": ["sorry", "apologetic"]
+    }
+  }
+
+ 
+  
+]
+
+

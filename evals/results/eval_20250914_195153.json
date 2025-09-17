@@ -1,0 +1,94 @@
+{
+  "timestamp": "20250914_195153",
+  "average_score": 25.0,
+  "results": [
+    {
+      "test_id": "urgent_001",
+      "score": 0,
+      "feedback": [
+        "\u2717 Expected urgent, got None",
+        "\u2717 Low confidence (0, expected \u22657)",
+        "\u2717 No expected keywords found in explanation"
+      ],
+      "response": {
+        "error": "Failed to parse response",
+        "raw": "{\n    \"primary_tone\": \"urgent\",\n    \"confidence\": 9,\n    \"explanation\": \"Multiple indicators of urgency: 'ASAP' signals immediate need, direct statement about board meeting tomorrow implies time pressure, brevity suggests stress. Lack of pleasantries or buffer language reinforces urgent tone.\",\n    \"suggestions\": \"Consider adding a brief acknowledgment of the time-sensitive nature ('I know this is short notice') and a softer request ('Would you be able to prioritize this?') to maintain professionalism while preserving urgency.\"\n}\n\nKey tone signals analyzed:\n- \"ASAP\" is a direct urgency marker\n- Explicit deadline reference (board meeting tomorrow)\n- Terse, direct language without softening phrases\n- Minimal greeting/closing suggests time pressure\n- No apology or emotional padding\n\nThe tone reads as professionally urgent but potentially bordering on abrupt, which could be perceived as mildly aggressive if the recipient is sensitive to direct communication styles."
+      },
+      "expected": {
+        "primary_tone": "urgent",
+        "confidence_min": 7,
+        "should_contain": [
+          "time pressure",
+          "deadline",
+          "ASAP"
+        ]
+      }
+    },
+    {
+      "test_id": "professional_001",
+      "score": 0,
+      "feedback": [
+        "\u2717 Expected professional, got None",
+        "\u2717 Low confidence (0, expected \u22658)",
+        "\u2717 No expected keywords found in explanation"
+      ],
+      "response": {
+        "error": "Failed to parse response",
+        "raw": "{\n    \"primary_tone\": \"professional\",\n    \"confidence\": 9,\n    \"explanation\": \"The email uses formal language markers like 'Dear Mr. Smith', 'writing to follow up', and 'Best regards'. The tone is neutral and business-like, with no emotional embellishments. Phrases like 'proposed partnership' and 'updated terms' signal a strictly professional communication context.\",\n    \"suggestions\": \"The email could potentially benefit from a slightly warmer closing or a brief sentence indicating appreciation for the recipient's time, but it effectively maintains a crisp, professional tone as-is.\"\n}\n\nKey analysis points:\n- Formal salutation and closing\n- Neutral, matter-of-fact language\n- Clear business purpose\n- No emotional coloring\n- Concise and direct communication style\n\nThe email prioritizes professionalism and clarity over personal warmth, which is appropriate for many business interactions."
+      },
+      "expected": {
+        "primary_tone": "professional",
+        "confidence_min": 8,
+        "should_contain": [
+          "formal",
+          "business"
+        ]
+      }
+    },
+    {
+      "test_id": "friendly_001",
+      "score": 100.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 2/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "friendly",
+        "confidence": 9,
+        "explanation": "The email uses casual language with an exclamation point, a warm greeting ('Hey Mike!'), and an open, supportive phrase ('Let me know if you need anything!'). The word choice is relaxed and conversational, indicating a friendly, collegial approach.",
+        "suggestions": "If this is a more formal work context, consider using a slightly more professional greeting like 'Hi Mike' and adding a bit more specific context about the project status being requested."
+      },
+      "expected": {
+        "primary_tone": "friendly",
+        "confidence_min": 7,
+        "should_contain": [
+          "casual",
+          "warm"
+        ]
+      }
+    },
+    {
+      "test_id": "apologetic_001",
+      "score": 0,
+      "feedback": [
+        "\u2717 Expected apologetic, got None",
+        "\u2717 Low confidence (0, expected \u22658)",
+        "\u2717 No expected keywords found in explanation"
+      ],
+      "response": {
+        "error": "Failed to parse response",
+        "raw": "{\n    \"primary_tone\": \"apologetic\",\n    \"confidence\": 9,\n    \"explanation\": \"Multiple direct apologies ('I'm really sorry', 'Sorry again'), acknowledgment of missed commitment, personal accountability ('I completely dropped the ball'), and commitment to immediate resolution indicate a genuinely remorseful and transparent tone\",\n    \"suggestions\": \"Consider adding a brief explanation of what caused the delay, which would further demonstrate professionalism and rebuild trust\"\n}\n\nKey analysis points:\n- Casual language (\"dropped the ball\") softens the professional apology\n- Clear commitment to immediate resolution (\"I'll have it to you by end of day today\")\n- Personal, direct communication style suggests a good working relationship\n- Multiple apologies show genuine remorse without being overly formal\n- No defensiveness or attempt to minimize the missed deadline\n\nThe tone effectively communicates accountability and a sincere intent to correct the mistake quickly."
+      },
+      "expected": {
+        "primary_tone": "apologetic",
+        "confidence_min": 8,
+        "should_contain": [
+          "sorry",
+          "apologetic"
+        ]
+      }
+    }
+  ]
+}

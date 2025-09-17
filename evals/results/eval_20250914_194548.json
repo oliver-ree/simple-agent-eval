@@ -1,0 +1,103 @@
+{
+  "timestamp": "20250914_194548",
+  "average_score": 90.0,
+  "results": [
+    {
+      "test_id": "urgent_001",
+      "score": 80,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2717 No expected keywords found in explanation",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "urgent",
+        "confidence": 9,
+        "explanation": "The email uses a direct, time-sensitive language with emphasis on immediate action ('ASAP', mentioning the board meeting tomorrow), indicating a sense of urgency and potential stress",
+        "suggestions": "Consider adding a more collaborative or polite phrasing to soften the urgent tone, such as 'Would you be able to send the quarterly report as soon as possible? I need it for the board meeting tomorrow.'"
+      },
+      "expected": {
+        "primary_tone": "urgent",
+        "confidence_min": 7,
+        "should_contain": [
+          "time pressure",
+          "deadline",
+          "ASAP"
+        ]
+      }
+    },
+    {
+      "test_id": "professional_001",
+      "score": 100.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 2/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "professional",
+        "confidence": 9,
+        "explanation": "The email uses formal language, a structured business communication style, maintains a neutral and direct approach, and follows typical professional email etiquette with a clear purpose and respectful address",
+        "suggestions": "While professional, the email could benefit from slightly more warmth or context about the specific details of the proposed partnership to enhance engagement"
+      },
+      "expected": {
+        "primary_tone": "professional",
+        "confidence_min": 8,
+        "should_contain": [
+          "formal",
+          "business"
+        ]
+      }
+    },
+    {
+      "test_id": "friendly_001",
+      "score": 100.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 2/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "friendly",
+        "confidence": 9,
+        "explanation": "The email uses an informal greeting ('Hey Mike!'), a conversational and supportive language ('Hope you're doing well!'), and a casual sign-off ('Cheers'). The tone is warm and approachable without being overly familiar.",
+        "suggestions": "If this is a strictly professional context, consider slightly more formal language like 'Hi Mike' or 'Hello Mike' and a sign-off like 'Best regards'"
+      },
+      "expected": {
+        "primary_tone": "friendly",
+        "confidence_min": 7,
+        "should_contain": [
+          "casual",
+          "warm"
+        ]
+      }
+    },
+    {
+      "test_id": "apologetic_001",
+      "score": 80,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2717 No expected keywords found in explanation",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "apologetic",
+        "confidence": 9,
+        "explanation": "The email is focused on acknowledging a missed deadline, expressing genuine remorse, and committing to an immediate resolution. The language is direct and shows personal accountability.",
+        "suggestions": "The tone is appropriate for the situation. Tom could potentially add a brief explanation of the delay if context would be helpful, but the concise apology and commitment to delivery are effective."
+      },
+      "expected": {
+        "primary_tone": "apologetic",
+        "confidence_min": 8,
+        "should_contain": [
+          "sorry",
+          "apologetic"
+        ]
+      }
+    }
+  ]
+}

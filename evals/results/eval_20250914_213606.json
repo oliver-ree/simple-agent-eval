@@ -1,0 +1,128 @@
+{
+  "timestamp": "20250914_213606",
+  "average_score": 90.66666666666667,
+  "results": [
+    {
+      "test_id": "mixed_001",
+      "score": 86.66666666666667,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/3 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "urgent",
+        "confidence": 9,
+        "explanation": "Use of 'urgently', 'ASAP', and apology signal strong time-sensitive request with high personal need",
+        "suggestions": "Add more context about specific need and potential timeline to provide clarity"
+      },
+      "expected": {
+        "primary_tone": "urgent",
+        "confidence_min": 6,
+        "should_contain": [
+          "mixed",
+          "urgent",
+          "apologetic"
+        ]
+      }
+    },
+    {
+      "test_id": "urgent_001",
+      "score": 86.66666666666667,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/3 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "urgent",
+        "confidence": 9,
+        "explanation": "Phrases like 'ASAP' and 'board meeting is tomorrow' indicate high time pressure and stress. Direct language with minimal pleasantries suggests urgency.",
+        "suggestions": "Add a brief apology or acknowledgment of the potential inconvenience to soften the urgent tone"
+      },
+      "expected": {
+        "primary_tone": "urgent",
+        "confidence_min": 7,
+        "should_contain": [
+          "time pressure",
+          "deadline",
+          "ASAP"
+        ]
+      }
+    },
+    {
+      "test_id": "professional_001",
+      "score": 100.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 2/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "professional",
+        "confidence": 9,
+        "explanation": "Formal salutation ('Dear Mr. Smith'), structured business language, no emotional markers, formal closing ('Best regards'), use of professional phrasing like 'follow up' and 'proposed partnership'",
+        "suggestions": "Consider adding a brief personal touch or more context to soften the purely transactional tone"
+      },
+      "expected": {
+        "primary_tone": "professional",
+        "confidence_min": 8,
+        "should_contain": [
+          "formal",
+          "business"
+        ]
+      }
+    },
+    {
+      "test_id": "friendly_001",
+      "score": 90.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "friendly",
+        "confidence": 9,
+        "explanation": "Casual greeting ('Hey Mike!'), conversational language ('check in'), informal closing ('Cheers'), and open/supportive offer to help indicate a friendly, low-pressure tone",
+        "suggestions": "If more formality is required, could replace 'Hey' with 'Hi' and add slightly more specific project context"
+      },
+      "expected": {
+        "primary_tone": "friendly",
+        "confidence_min": 7,
+        "should_contain": [
+          "casual",
+          "warm"
+        ]
+      }
+    },
+    {
+      "test_id": "apologetic_001",
+      "score": 90.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "apologetic",
+        "confidence": 9,
+        "explanation": "Multiple direct apologies ('I'm really sorry', 'Sorry again'), acknowledgment of missed commitment, clear admission of personal fault ('I completely dropped the ball')",
+        "suggestions": "Consider offering a brief explanation for the delay and proactively suggesting how you'll prevent similar issues in the future"
+      },
+      "expected": {
+        "primary_tone": "apologetic",
+        "confidence_min": 8,
+        "should_contain": [
+          "sorry",
+          "apologetic"
+        ]
+      }
+    }
+  ]
+}

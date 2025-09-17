@@ -1,0 +1,128 @@
+{
+  "timestamp": "20250914_213439",
+  "average_score": 90.66666666666667,
+  "results": [
+    {
+      "test_id": "mixed_001",
+      "score": 86.66666666666667,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/3 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "urgent",
+        "confidence": 9,
+        "explanation": "Phrases like 'I need this urgently' and 'ASAP' create a strong sense of immediacy and time pressure. The language is informal but directly communicates critical time sensitivity.",
+        "suggestions": "Consider providing more context about the urgent request and specify exact expectations to improve clarity"
+      },
+      "expected": {
+        "primary_tone": "urgent",
+        "confidence_min": 6,
+        "should_contain": [
+          "mixed",
+          "urgent",
+          "apologetic"
+        ]
+      }
+    },
+    {
+      "test_id": "urgent_001",
+      "score": 86.66666666666667,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/3 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "urgent",
+        "confidence": 9,
+        "explanation": "Phrases like 'ASAP' and 'board meeting is tomorrow' signal time pressure and stress. Direct language without softening indicates a sense of urgency.",
+        "suggestions": "Add a brief apology or acknowledgment of the tight timeline to maintain professional courtesy"
+      },
+      "expected": {
+        "primary_tone": "urgent",
+        "confidence_min": 7,
+        "should_contain": [
+          "time pressure",
+          "deadline",
+          "ASAP"
+        ]
+      }
+    },
+    {
+      "test_id": "professional_001",
+      "score": 100.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 2/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "professional",
+        "confidence": 9,
+        "explanation": "Formal greeting ('Dear Mr. Smith'), standard business language ('follow up', 'proposed partnership'), neutral word choice, structured closing ('Best regards')",
+        "suggestions": "Consider adding a brief warmth indicator or specific next step to make communication slightly more engaging"
+      },
+      "expected": {
+        "primary_tone": "professional",
+        "confidence_min": 8,
+        "should_contain": [
+          "formal",
+          "business"
+        ]
+      }
+    },
+    {
+      "test_id": "friendly_001",
+      "score": 90.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "friendly",
+        "confidence": 9,
+        "explanation": "Casual greeting ('Hey Mike!'), informal language ('check in'), and an open, supportive closing phrase ('Let me know if you need anything!')",
+        "suggestions": "Slightly more specificity about project progress might add professional context"
+      },
+      "expected": {
+        "primary_tone": "friendly",
+        "confidence_min": 7,
+        "should_contain": [
+          "casual",
+          "warm"
+        ]
+      }
+    },
+    {
+      "test_id": "apologetic_001",
+      "score": 90.0,
+      "feedback": [
+        "\u2713 Correct primary tone",
+        "\u2713 Confidence adequate (9)",
+        "\u2713 Found 1/2 expected keywords",
+        "\u2713 Provided suggestions"
+      ],
+      "response": {
+        "primary_tone": "apologetic",
+        "confidence": 9,
+        "explanation": "Direct apologies ('I'm really sorry'), acknowledgment of missed commitment, and personal accountability indicate a sincere, remorseful tone",
+        "suggestions": "Consider specifying a precise time for delivery to reinforce commitment"
+      },
+      "expected": {
+        "primary_tone": "apologetic",
+        "confidence_min": 8,
+        "should_contain": [
+          "sorry",
+          "apologetic"
+        ]
+      }
+    }
+  ]
+}
